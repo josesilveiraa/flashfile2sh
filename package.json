@@ -2,14 +2,18 @@
   "name": "flashfile2sh",
   "module": "scr/index.ts",
   "author": "Josesilveiraa",
+  "version": "0.0.1",
   "type": "module",
-  "license": "UNLICENSE",
+  "bin": {
+    "flashfile2sh": "./src/index.ts"
+  },
+  "license": "UNLICENSED",
   "scripts": {
     "start": "bun src/index.ts"
   },
   "devDependencies": {
-    "bun-types": "^0.5.0",
-    "@types/figlet": "^1.5.5"
+    "@types/figlet": "^1.5.5",
+    "bun-types": "^0.5.0"
   },
   "dependencies": {
     "commander": "^10.0.0",

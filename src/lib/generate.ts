@@ -58,6 +58,7 @@ export default async function generate(input: string, output: string) {
       checksumString = checker + ' --check <<EOF || exit 1\n' + Object.entries(checksums).map(([filename, checksum]) => `${checksum} *${filename}\n`).join('') + 'EOF';
     }
   }
+
   commandsToBeWritten.unshift(`${checksumString}\n\n`);
   Bun.write(output, commandsToBeWritten);
 }
