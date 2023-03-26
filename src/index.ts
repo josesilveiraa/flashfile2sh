@@ -6,6 +6,8 @@ import generate from './lib/generate.js';
 
 const program = new Command();
 
+console.log(figlet.textSync('Flashfile2Sh'));
+
 program
   .version('0.0.1')
   .description('A CLI utility for generating flash scripts from flashfile.xml files.')
@@ -14,8 +16,6 @@ program
   .parse(process.argv);
 
 const options = program.opts();
-
-console.log(figlet.textSync('Flashfile2Sh'));
 
 generate(options.input, options.output).then(() => {
   console.log(`Wrote flashscript to ${options.output}`);

@@ -1,15 +1,27 @@
 # flashfile2sh
 
-To install dependencies:
+A CLI utility that generates a flashable script to flash Motorola factory ROMs.
 
+## :package: Installation
+
+**Globally**
 ```bash
-bun install
+$ yarn global add flashfile2sh
+# or
+$ npm install flashfile2sh
 ```
 
-To run:
-
+**Locally**
 ```bash
-bun run index.ts
-```
+# Clone the repository
+$ git clone https://github.com/josesilveiraa/flashfile2sh
 
-This project was created using `bun init` in bun v0.5.7. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
+# CD into it
+$ cd flashfile2sh
+
+# Install dependencies
+$ yarn install
+
+# Run it
+$ yarn start
+```
