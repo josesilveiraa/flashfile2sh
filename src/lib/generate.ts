@@ -79,14 +79,14 @@ export default async function generate(input: string, output: string) {
     }
 
     commandsToBeWritten.unshift(`${checksumString}\n\n`);
-    commandsToBeWritten.unshift(`${info}`)
+    commandsToBeWritten.unshift(`${info}`);
 
     try {
       await writeFile(output, commandsToBeWritten.join(''));
     } catch (err) {
-      if (err) console.error(`Error writing commands to file: ${err}`);
+      if (err) throw err;
     }
-  } catch (error: any) {
-    if (error.code === 'ENOENT') throw new Error('Input file not found.');
+  } catch (err) {
+    if(err) throw err;
   }
 }

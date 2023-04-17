@@ -1,15 +1,14 @@
 {
   "name": "flashfile2sh",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A CLI utility for generating flash scripts from flashfile.xml files.",
-  "main": "bin/index.js",
-  "module": "src/index.ts",
+  "main": "dist/index.js",
   "scripts": {
     "dev": "ts-node src/index.ts",
     "build": "tsc"
   },
   "bin": {
-    "flashfile2sh": "bin/index.js"
+    "flashfile2sh": "./dist/index.js"
   },
   "author": "Josesilveiraa",
   "license": "UNLICENSED",
